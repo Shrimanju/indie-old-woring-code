@@ -3017,31 +3017,23 @@ class Main(MainContext):
                 + risk_mode_row + '\n'
                 + net_profit_row + '\n'
                 + monthly_net_profit_row
-                + '\n' + top_border
-                + '\n| ' + 'ENTRY CANDLE FAVORABLE MOVEMENT'.ljust(label_width) + ' | ' + 'COUNT'.ljust(value_width) + ' |'
-                + '\n' + top_border
-                + '\n| ' + '0-10%'.ljust(label_width) + ' | '
-                + str(report_mfe_00_01[0]).ljust(value_width) + ' |'
-                + '\n| ' + '10-20%'.ljust(label_width) + ' | '
-                + str(report_mfe_01_02[0]).ljust(value_width) + ' |'
-                + '\n| ' + '20-30%'.ljust(label_width) + ' | '
-                + str(report_mfe_02_03[0]).ljust(value_width) + ' |'
-                + '\n| ' + '30-40%'.ljust(label_width) + ' | '
-                + str(report_mfe_03_04[0]).ljust(value_width) + ' |'
-                + '\n| ' + '40-50%'.ljust(label_width) + ' | '
-                + str(report_mfe_04_05[0]).ljust(value_width) + ' |'
-                + '\n| ' + '50-60%'.ljust(label_width) + ' | '
-                + str(report_mfe_05_06[0]).ljust(value_width) + ' |'
-                + '\n| ' + '60-70%'.ljust(label_width) + ' | '
-                + str(report_mfe_06_07[0]).ljust(value_width) + ' |'
-                + '\n| ' + '70-80%'.ljust(label_width) + ' | '
-                + str(report_mfe_07_08[0]).ljust(value_width) + ' |'
-                + '\n| ' + '80-90%'.ljust(label_width) + ' | '
-                + str(report_mfe_08_09[0]).ljust(value_width) + ' |'
-                + '\n| ' + '90-100%'.ljust(label_width) + ' | '
-                + str(report_mfe_09_10[0]).ljust(value_width) + ' |'
-                + '\n' + top_border
             )
+
+            # Setup-candle favorable movement distribution.
+            report_text += '\n' + top_border
+            report_text += '\n| ' + 'ENTRY CANDLE FAVORABLE MOVEMENT'.ljust(label_width) + ' | ' + 'COUNT'.ljust(value_width) + ' |'
+            report_text += '\n' + top_border
+            report_text += '\n| ' + '0-10%'.ljust(label_width) + ' | ' + str(int(report_mfe_00_01[0])).ljust(value_width) + ' |'
+            report_text += '\n| ' + '10-20%'.ljust(label_width) + ' | ' + str(int(report_mfe_01_02[0])).ljust(value_width) + ' |'
+            report_text += '\n| ' + '20-30%'.ljust(label_width) + ' | ' + str(int(report_mfe_02_03[0])).ljust(value_width) + ' |'
+            report_text += '\n| ' + '30-40%'.ljust(label_width) + ' | ' + str(int(report_mfe_03_04[0])).ljust(value_width) + ' |'
+            report_text += '\n| ' + '40-50%'.ljust(label_width) + ' | ' + str(int(report_mfe_04_05[0])).ljust(value_width) + ' |'
+            report_text += '\n| ' + '50-60%'.ljust(label_width) + ' | ' + str(int(report_mfe_05_06[0])).ljust(value_width) + ' |'
+            report_text += '\n| ' + '60-70%'.ljust(label_width) + ' | ' + str(int(report_mfe_06_07[0])).ljust(value_width) + ' |'
+            report_text += '\n| ' + '70-80%'.ljust(label_width) + ' | ' + str(int(report_mfe_07_08[0])).ljust(value_width) + ' |'
+            report_text += '\n| ' + '80-90%'.ljust(label_width) + ' | ' + str(int(report_mfe_08_09[0])).ljust(value_width) + ' |'
+            report_text += '\n| ' + '90-100%'.ljust(label_width) + ' | ' + str(int(report_mfe_09_10[0])).ljust(value_width) + ' |'
+            report_text += '\n' + top_border
 
 
             # Optional daily breakdown for the selected month, through the current IST date.
